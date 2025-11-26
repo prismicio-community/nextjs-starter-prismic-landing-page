@@ -1,0 +1,118 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"items": [],
+		"primary": {
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"content": {
+							"text": "Do nisi mollit incididunt excepteur cillum tempor adipisicing labore reprehenderit nostrud. Ea magna elit incididunt sit Lorem cupidatat."
+						},
+						"type": "paragraph"
+					}
+				]
+			},
+			"features": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"key": "bd8ef4ab-d169-4f72-b2eb-d0c0d9954f1a",
+						"value": [
+							[
+								"text",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"content": {
+												"text": "Do nisi mollit incididunt excepteur cillum tempor adipisicing labore reprehenderit nostrud."
+											},
+											"type": "paragraph"
+										}
+									]
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"key": "cd9ef4ab-d169-4f72-b2eb-d0c0d9954f1b",
+						"value": [
+							[
+								"text",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"content": {
+												"text": "Do nisi mollit incididunt excepteur cillum tempor adipisicing labore reprehenderit nostrud."
+											},
+											"type": "paragraph"
+										}
+									]
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"key": "ed0ef4ab-d169-4f72-b2eb-d0c0d9954f1c",
+						"value": [
+							[
+								"text",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"content": {
+												"text": "Do nisi mollit incididunt excepteur cillum tempor adipisicing labore reprehenderit nostrud."
+											},
+											"type": "paragraph"
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			},
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"content": {
+							"text": "Fancy new headlines for your product"
+						},
+						"type": "heading2"
+					}
+				]
+			},
+			"image": {
+				"alt": "rope",
+				"edit": {
+					"background": "transparent",
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"zoom": 1
+				},
+				"height": 4000,
+				"origin": {
+					"height": 4000,
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a",
+					"width": 4000
+				},
+				"url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a",
+				"width": 4000,
+				"credits": null,
+				"__TYPE__": "ImageContent"
+			}
+		},
+		"variation": "default"
+	}
+]

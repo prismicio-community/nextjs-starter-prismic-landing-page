@@ -1,0 +1,50 @@
+{
+  "description": "A list of frequently asked questions",
+  "id": "faq",
+  "name": "Faq",
+  "type": "SharedSlice",
+  "variations": [
+    {
+      "description": "Default variation",
+      "docURL": "...",
+      "id": "default",
+      "imageUrl": "",
+      "name": "Default",
+      "primary": {
+        "heading": {
+          "config": {
+            "label": "Heading",
+            "placeholder": "Frequently Asked Questions",
+            "single": "heading2"
+          },
+          "type": "StructuredText"
+        },
+        "items": {
+          "config": {
+            "fields": {
+              "question": {
+                "config": {
+                  "label": "Question",
+                  "placeholder": "What is...?"
+                },
+                "type": "Text"
+              },
+              "answer": {
+                "config": {
+                  "label": "Answer",
+                  "multi": "paragraph,strong,em,hyperlink",
+                  "placeholder": "The answer is..."
+                },
+                "type": "StructuredText"
+              }
+            },
+            "label": "Questions"
+          },
+          "type": "Group"
+        }
+      },
+      "version": "initial",
+      "items": {}
+    }
+  ]
+}

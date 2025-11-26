@@ -1,0 +1,34 @@
+{
+  "description": "A section to display a grid of logos",
+  "id": "logo_cloud",
+  "name": "LogoCloud",
+  "type": "SharedSlice",
+  "variations": [
+    {
+      "description": "Default variation",
+      "docURL": "...",
+      "id": "default",
+      "name": "Default",
+      "primary": {
+        "logos": {
+          "config": {
+            "fields": {
+              "image": {
+                "config": {
+                  "constraint": {},
+                  "label": "Logo"
+                },
+                "type": "Image"
+              }
+            },
+            "label": "Logos"
+          },
+          "type": "Group"
+        }
+      },
+      "version": "initial",
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
+      "items": {}
+    }
+  ]
+}

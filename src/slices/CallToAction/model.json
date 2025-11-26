@@ -1,0 +1,39 @@
+{
+  "description": "Call To Action section with heading and buttons",
+  "id": "call_to_action",
+  "name": "CallToAction",
+  "type": "SharedSlice",
+  "variations": [
+    {
+      "description": "Default variation",
+      "docURL": "...",
+      "id": "default",
+      "imageUrl": "",
+      "name": "Default",
+      "primary": {
+        "heading": {
+          "config": {
+            "label": "Heading",
+            "single": "heading2"
+          },
+          "type": "StructuredText"
+        },
+        "buttons": {
+          "config": {
+            "allowText": true,
+            "label": "Buttons",
+            "repeat": true,
+            "select": "web",
+            "variants": [
+              "Filled",
+              "Outline"
+            ]
+          },
+          "type": "Link"
+        }
+      },
+      "version": "initial",
+      "items": {}
+    }
+  ]
+}
