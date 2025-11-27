@@ -22,7 +22,7 @@ export function Bounded({
     <Comp
       className={clsx(
         "px-6 py-10 md:py-20 [.header+&]:pt-12 [.header+&]:md:pt-16",
-        className
+        className,
       )}
       {...restProps}
     >
@@ -30,7 +30,7 @@ export function Bounded({
         className={clsx(
           "mx-auto w-full",
           !fullWidth && "max-w-6xl",
-          innerClassName
+          innerClassName,
         )}
       >
         {children}
