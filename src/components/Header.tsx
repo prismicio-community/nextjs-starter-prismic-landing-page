@@ -1,7 +1,7 @@
 import { createClient } from "@/prismicio";
 import { PrismicNextLink } from "@prismicio/next";
 import Link from "next/link";
-import Logo from "@/components/Logo";
+import { Logo } from "@/components/Logo";
 
 export async function Header() {
   const client = createClient();
@@ -14,7 +14,7 @@ export async function Header() {
         className="flex flex-col justify-between font-medium text-gray-900 md:flex-row md:items-center"
       >
         <Link href="/">
-          <Logo className="size-8" />
+          <Logo className="size-8 text-gray-400" />
           <span className="sr-only">{settings.data.site_title || "Home"}</span>
         </Link>
         <ul className="flex gap-6">

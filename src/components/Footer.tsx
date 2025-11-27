@@ -1,7 +1,7 @@
 import { createClient } from "@/prismicio";
 import { PrismicNextLink } from "@prismicio/next";
 import Link from "next/link";
-import Logo from "@/components/Logo";
+import { Logo } from "@/components/Logo";
 
 export async function Footer() {
   const client = createClient();
@@ -11,7 +11,7 @@ export async function Footer() {
     <footer className="text-gray-600 border-t border-gray-200">
       <div className="mx-auto max-w-6xl w-[calc(100vw-3rem)] py-4 md:py-6 flex gap-4 items-center justify-between flex-col sm:flex-row">
         <Link href="/">
-          <Logo className="size-8" />
+          <Logo className="size-8 text-gray-400" />
           <span className="sr-only">{settings.data.site_title || "Home"}</span>
         </Link>
         <p className="text-xs">
