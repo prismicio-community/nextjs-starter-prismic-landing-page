@@ -5,11 +5,7 @@ Want to quickly get started building your own project with [Prismic](https://pri
 - **Demo**: [Open live demo](https://nextjs-starter-prismic-landing-page.vercel.app)
 - **Learn more about Prismic and Next.js**: [Prismic Next.js Documentation](https://prismic.io/docs/nextjs)
 
-&nbsp;
-
-![Website screenshot](https://user-images.githubusercontent.com/31219208/228821412-fdde92b2-c13c-4287-b799-611fa96a5fd6.png)
-
-&nbsp;
+![Website screenshot](https://github.com/user-attachments/assets/d6ce29aa-084f-496d-84e9-75cfd026fe92)
 
 ## 🚀 Quick Start
 
