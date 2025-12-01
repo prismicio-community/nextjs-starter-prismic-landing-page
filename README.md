@@ -17,8 +17,9 @@ To start a new project using this starter, run this command:
 
 ```sh
 npx @slicemachine/init@latest --starter nextjs-starter-prismic-landing-page
-# You'll be asked to sign in to Prismic and create a content repository.
 ```
+
+You'll be asked to sign in to Prismic and create a content repository.
 
 When you're ready to start your project, run the following command:
 
