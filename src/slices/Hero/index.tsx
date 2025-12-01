@@ -47,7 +47,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
       {slice.variation === "default" && (
         <PrismicNextImage
           field={slice.primary.image}
-          className="relative aspect-square overflow-hidden rounded-2xl bg-gray-100 border border-gray-200 shadow-sm object-cover"
+          className="relative aspect-square overflow-hidden rounded-2xl bg-gray-900 border border-gray-200 shadow-sm object-cover"
         />
       )}
     </section>
