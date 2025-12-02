@@ -28,6 +28,7 @@ const LogoCloud: FC<LogoCloudProps> = ({ slice }) => {
               >
                 <PrismicNextImage
                   field={item.image}
+                  sizes="150px"
                   className="max-w-[150px] h-16 object-contain grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
                   fallbackAlt=""
                 />

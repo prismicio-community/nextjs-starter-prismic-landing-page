@@ -72,6 +72,7 @@ const Features: FC<FeaturesProps> = ({ slice }) => {
       </div>
       <PrismicNextImage
         field={slice.primary.image}
+        sizes="(min-width: 1024px) 576px, 100vw"
         className="rounded-2xl bg-gray-900 border border-gray-200 shadow-sm"
       />
     </section>
