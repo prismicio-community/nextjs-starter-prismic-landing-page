@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={manrope.variable}>
-      <body className="bg-white text-gray-900 antialiased selection:bg-black selection:text-white">
+      <body className="bg-white text-zinc-900 antialiased selection:bg-black selection:text-white">
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />

@@ -21,17 +21,17 @@ const Hero: FC<HeroProps> = ({ slice }) => {
     >
       <div>
         {isFilled.keyText(slice.primary.tagline) && (
-          <p className="text-sm font-semibold uppercase tracking-widest text-gray-500">
+          <p className="text-sm font-semibold uppercase tracking-widest text-zinc-500">
             {slice.primary.tagline}
           </p>
         )}
         {isFilled.richText(slice.primary.headline) && (
-          <div className="text-5xl font-bold tracking-tight leading-tighter md:text-7xl text-gray-900 text-balance mt-2">
+          <div className="text-5xl font-bold tracking-tight leading-tighter md:text-7xl text-zinc-900 text-balance mt-2">
             <PrismicRichText field={slice.primary.headline} />
           </div>
         )}
         {isFilled.richText(slice.primary.description) && (
-          <div className="max-w-md mt-6 text-lg text-gray-500 leading-relaxed">
+          <div className="max-w-md mt-6 text-lg text-zinc-500 leading-relaxed">
             <PrismicRichText field={slice.primary.description} />
           </div>
         )}
@@ -48,7 +48,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
         <PrismicNextImage
           field={slice.primary.image}
           sizes="(min-width: 768px) 576px, 100vw"
-          className="relative aspect-square overflow-hidden rounded-2xl bg-gray-900 border border-gray-200 shadow-sm object-cover"
+          className="relative aspect-square overflow-hidden rounded-2xl bg-zinc-900 border border-zinc-200 shadow-sm object-cover"
         />
       )}
     </section>

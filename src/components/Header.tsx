@@ -11,10 +11,10 @@ export async function Header() {
     <header className="mx-auto max-w-6xl w-[calc(100vw-3rem)] py-6 md:py-8">
       <nav
         aria-label="Main"
-        className="flex flex-col justify-between font-medium text-gray-900 md:flex-row md:items-center"
+        className="flex flex-col justify-between font-medium text-zinc-900 md:flex-row md:items-center"
       >
         <Link href="/">
-          <Logo className="size-8 text-gray-400" />
+          <Logo className="size-8 text-zinc-400" />
           <span className="sr-only">{settings.data.site_title || "Home"}</span>
         </Link>
         <ul className="flex gap-6">

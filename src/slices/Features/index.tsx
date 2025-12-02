@@ -40,19 +40,19 @@ const Features: FC<FeaturesProps> = ({ slice }) => {
     >
       <div className="lg:max-w-lg">
         {isFilled.richText(slice.primary.heading) && (
-          <h2 className="text-3xl font-bold tracking-tighter text-gray-900 sm:text-4xl md:text-5xl">
+          <h2 className="text-3xl font-bold tracking-tighter text-zinc-900 sm:text-4xl md:text-5xl">
             <PrismicText field={slice.primary.heading} />
           </h2>
         )}
 
         {isFilled.richText(slice.primary.description) && (
-          <div className="mt-6 text-lg leading-relaxed text-gray-500">
+          <div className="mt-6 text-lg leading-relaxed text-zinc-500">
             <PrismicRichText field={slice.primary.description} />
           </div>
         )}
 
         {isFilled.group(slice.primary.features) && (
-          <ul className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+          <ul className="mt-10 max-w-xl space-y-8 text-base leading-7 text-zinc-600 lg:max-w-none">
             {slice.primary.features.map((item, index) => (
               <li
                 key={`${index}-${asText(item.text)}`}
@@ -73,7 +73,7 @@ const Features: FC<FeaturesProps> = ({ slice }) => {
       <PrismicNextImage
         field={slice.primary.image}
         sizes="(min-width: 1024px) 576px, 100vw"
-        className="rounded-2xl bg-gray-900 border border-gray-200 shadow-sm"
+        className="rounded-2xl bg-zinc-900 border border-zinc-200 shadow-sm"
       />
     </section>
   );

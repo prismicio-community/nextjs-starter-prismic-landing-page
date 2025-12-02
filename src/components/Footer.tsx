@@ -8,10 +8,10 @@ export async function Footer() {
   const settings = await client.getSingle("settings");
 
   return (
-    <footer className="text-gray-600 border-t border-gray-200">
+    <footer className="text-zinc-600 border-t border-zinc-200">
       <div className="mx-auto max-w-6xl w-[calc(100vw-3rem)] py-4 md:py-6 flex gap-4 items-center justify-between flex-col sm:flex-row">
         <Link href="/">
-          <Logo className="size-8 text-gray-400" />
+          <Logo className="size-8 text-zinc-400" />
           <span className="sr-only">{settings.data.site_title || "Home"}</span>
         </Link>
         <p className="text-xs">

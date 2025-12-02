@@ -19,7 +19,7 @@ const CallToAction: FC<CallToActionProps> = ({ slice }) => {
       className="mx-auto max-w-4xl w-[calc(100vw-3rem)] py-10 md:py-20 flex flex-col items-center gap-8 text-center"
     >
       {isFilled.richText(slice.primary.heading) && (
-        <h2 className="text-5xl font-bold tracking-tighter md:text-7xl text-balance text-gray-900">
+        <h2 className="text-5xl font-bold tracking-tighter md:text-7xl text-balance text-zinc-900">
           <PrismicText field={slice.primary.heading} />
         </h2>
       )}
