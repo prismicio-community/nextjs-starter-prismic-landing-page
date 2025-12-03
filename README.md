@@ -7,7 +7,7 @@ Want to quickly get started building your own project with [Prismic](https://pri
 
 ![Website screenshot](https://github.com/user-attachments/assets/d6ce29aa-084f-496d-84e9-75cfd026fe92)
 
-## 🚀 Quick Start
+## 🚀 Quick start
 
 To start a new project using this starter, run this command:
 
@@ -18,6 +18,26 @@ npx @slicemachine/init@latest --starter nextjs-starter-prismic-landing-page
 You'll be asked to sign in to Prismic and create a content repository.
 
 When you're ready to start your project, run the following command:
+
+```sh
+npm run dev
+```
+
+### 🚀 Quick start with Vercel
+
+You can also create a new project on [Vercel](https://vercel.com) by clicking the button below:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fprismicio-community%2Fnextjs-starter-prismic-landing-page)
+
+Then clone the created GitHub repository locally and run the following command:
+
+```sh
+npx @slicemachine/init@latest
+```
+
+You'll be asked to sign in to Prismic and create a content repository.
+
+When you're ready to start your project locally, run the following command:
 
 ```sh
 npm run dev
