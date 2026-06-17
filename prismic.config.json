@@ -1,0 +1,14 @@
+{
+  "repositoryName": "nextjs-starter-landing-page",
+  "libraries": ["./src/slices"],
+  "routes": [
+    {
+      "type": "homepage",
+      "path": "/"
+    },
+    {
+      "type": "page",
+      "path": "/:uid"
+    }
+  ]
+}

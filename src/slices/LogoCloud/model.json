@@ -1,34 +1,34 @@
 {
-  "description": "A section to display a grid of logos",
   "id": "logo_cloud",
-  "name": "LogoCloud",
   "type": "SharedSlice",
+  "name": "LogoCloud",
   "variations": [
     {
-      "description": "Default variation",
-      "docURL": "...",
       "id": "default",
       "name": "Default",
+      "description": "Default variation",
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
+      "docURL": "...",
+      "version": "initial",
       "primary": {
         "logos": {
+          "type": "Group",
           "config": {
+            "label": "Logos",
             "fields": {
               "image": {
+                "type": "Image",
                 "config": {
-                  "constraint": {},
-                  "label": "Logo"
-                },
-                "type": "Image"
+                  "label": "Logo",
+                  "constraint": {}
+                }
               }
-            },
-            "label": "Logos"
-          },
-          "type": "Group"
+            }
+          }
         }
       },
-      "version": "initial",
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
       "items": {}
     }
-  ]
+  ],
+  "description": "A section to display a grid of logos"
 }
