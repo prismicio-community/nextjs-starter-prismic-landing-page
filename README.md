@@ -9,13 +9,12 @@ Want to quickly get started building your own project with [Prismic](https://pri
 
 ## 🚀 Quick start
 
-To start a new project using this starter, run this command:
+To start a new project using this starter:
 
-```sh
-npx @slicemachine/init@latest --starter nextjs-starter-prismic-landing-page
-```
-
-You'll be asked to sign in to Prismic and create a content repository.
+1. Visit <https://prismic.io/dashboard>.
+2. Create a new Prismic repository by selecting **Next.js**.
+3. Select the **Landing Page starter**.
+4. Fill out your repository details and continue with the steps given in Prismic.
 
 When you're ready to start your project, run the following command:
 
@@ -29,13 +28,11 @@ You can also create a new project on [Vercel](https://vercel.com) by clicking th
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fprismicio-community%2Fnextjs-starter-prismic-landing-page)
 
-Then clone the created GitHub repository locally and run the following command:
+Then clone the created GitHub repository locally and run the following command to install dependencies:
 
 ```sh
-npx @slicemachine/init@latest
+npm install
 ```
-
-You'll be asked to sign in to Prismic and create a content repository.
 
 When you're ready to start your project locally, run the following command:
 
@@ -89,7 +86,7 @@ These are important files that you should leave as-is:
 - `app/api/exit-preview/route.ts` - Do not edit or delete this file. This is the API endpoint to close a Prismic preview session.
 - `app/api/preview/route.ts` - Do not edit or delete this file. This is the API endpoint to launch a Prismic preview session.
 - `app/slice-simulator/page.tsx` - Do not edit or delete this file. This file simulates your slice components in development.
-- `slices/` - This directory contains slice components, which are generated programmatically by Slice Machine. To customize a slice template, you can edit the slice's index.tsx file. To add slices, delete slices, or edit slice models, use Slice Machine (more info below).
+- `slices/` - This directory contains slice components. To customize a slice template, you can edit the slice's index.tsx file. To add slices, delete slices, or edit slice models, use the Type Builder (more info below).
 
 Learn more about [fetching content](https://prismic.io/docs/nextjs#fetch-content) and [displaying content](https://prismic.io/docs/nextjs#display-content) in the Prismic documentation.
 
@@ -97,11 +94,15 @@ Learn more about [fetching content](https://prismic.io/docs/nextjs#fetch-content
 
 Learn how to [deploy your website](https://prismic.io/docs/nextjs#deploy) in the Prismic documentation.
 
-### Edit content models with Slice Machine
+### Edit content models with the Type Builder
 
-This project includes an application called Slice Machine, which generates models for your page types and slices. Slice Machine stores the models locally in your codebase, so you can save and version them. It also syncs your models to Prismic. Learn how to [use Slice Machine](https://prismic.io/docs/slice-machine) in the Prismic documentation.
+This project uses the [Type Builder](https://prismic.io/docs/type-builder), Prismic's cloud-based interface for modeling your page types and slices. Model your content in the Type Builder, then use the [Prismic CLI](https://prismic.io/docs/cli) to sync your models into your codebase, where you can save and version them:
 
-If you change or add to your page types, you'll need to update your route handling to match. To learn how to do that, see the [routing section](https://prismic.io/docs/nextjs#define-routes) in the Prismic documentation.
+```sh
+npx prismic pull
+```
+
+If you change or add to your page types, you'll need to update your route handling to match. Routes are configured in the `routes` array in `prismic.config.json`.
 
 ## Documentation
 

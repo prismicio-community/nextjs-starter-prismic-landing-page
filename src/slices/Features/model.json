@@ -2,15 +2,14 @@
   "id": "features",
   "type": "SharedSlice",
   "name": "Features",
-  "description": "Features section with image and list",
   "variations": [
     {
       "id": "default",
       "name": "Default",
+      "description": "Default variation",
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
       "docURL": "...",
       "version": "initial",
-      "description": "Default variation",
-      "imageUrl": "",
       "primary": {
         "heading": {
           "type": "StructuredText",
@@ -50,5 +49,6 @@
         }
       }
     }
-  ]
+  ],
+  "description": "Features section with image and list"
 }

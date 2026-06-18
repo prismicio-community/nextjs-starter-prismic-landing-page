@@ -1,50 +1,50 @@
 {
-  "description": "A list of frequently asked questions",
   "id": "faq",
-  "name": "Faq",
   "type": "SharedSlice",
+  "name": "Faq",
   "variations": [
     {
-      "description": "Default variation",
-      "docURL": "...",
       "id": "default",
-      "imageUrl": "",
       "name": "Default",
+      "description": "Default variation",
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
+      "docURL": "...",
+      "version": "initial",
       "primary": {
         "heading": {
+          "type": "StructuredText",
           "config": {
             "label": "Heading",
             "placeholder": "Frequently Asked Questions",
             "single": "heading2"
-          },
-          "type": "StructuredText"
+          }
         },
         "items": {
+          "type": "Group",
           "config": {
+            "label": "Questions",
             "fields": {
               "question": {
+                "type": "Text",
                 "config": {
                   "label": "Question",
                   "placeholder": "What is...?"
-                },
-                "type": "Text"
+                }
               },
               "answer": {
+                "type": "StructuredText",
                 "config": {
                   "label": "Answer",
-                  "multi": "paragraph,strong,em,hyperlink",
-                  "placeholder": "The answer is..."
-                },
-                "type": "StructuredText"
+                  "placeholder": "The answer is...",
+                  "multi": "paragraph,strong,em,hyperlink"
+                }
               }
-            },
-            "label": "Questions"
-          },
-          "type": "Group"
+            }
+          }
         }
       },
-      "version": "initial",
       "items": {}
     }
-  ]
+  ],
+  "description": "A list of frequently asked questions"
 }
