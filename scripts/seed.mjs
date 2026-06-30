@@ -29,6 +29,11 @@ const repositoryName = prismicConfig.repositoryName;
 const tokenName = `${repositoryName} seed`;
 const documentsURL = new URL("../documents/", import.meta.url);
 
+// Temporary: use the prerelease CLI that adds `--name` and `--json` to
+// `token create` (https://github.com/prismicio/cli/pull/205). Switch back to
+// "prismic" once those options ship in a stable release.
+const PRISMIC_CLI = "prismic@pr-205";
+
 /**
  * Runs a Prismic CLI command and returns its stdout. Forwards the CLI's own
  * error message and halts if the command fails — for example when the user is
@@ -39,7 +44,7 @@ const documentsURL = new URL("../documents/", import.meta.url);
  */
 function runPrismicCLI(args) {
   try {
-    return execFileSync("npx", ["prismic", ...args], {
+    return execFileSync("npx", [PRISMIC_CLI, ...args], {
       encoding: "utf8",
       stdio: ["ignore", "pipe", "pipe"],
     });
@@ -114,7 +119,7 @@ async function seed() {
   } finally {
     // Revoke the temporary write token.
     try {
-      execFileSync("npx", ["prismic", "token", "delete", token], {
+      execFileSync("npx", [PRISMIC_CLI, "token", "delete", token], {
         stdio: "ignore",
       });
     } catch {
