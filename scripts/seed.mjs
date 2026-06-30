@@ -11,7 +11,7 @@
  * (https://github.com/prismicio/cli/pull/205) — switch to `prismic` once those
  * options ship in a stable release.
  */
-import { execFileSync } from "node:child_process";
+import { execSync } from "node:child_process";
 import { readdirSync, readFileSync } from "node:fs";
 
 import { createMigration, createWriteClient } from "@prismicio/client";
@@ -19,26 +19,25 @@ import { createMigration, createWriteClient } from "@prismicio/client";
 const PRISMIC_CLI = "prismic@pr-205";
 const documentsURL = new URL("../documents/", import.meta.url);
 
-const prismic = (...args) =>
-  execFileSync("npx", [PRISMIC_CLI, ...args], {
+// Run a Prismic CLI command and return its stdout. The interpolated values (the
+// repo domain and JWT token) are Prismic-issued identifiers with no shell
+// metacharacters, so the command string is safe across platforms.
+const prismic = (command) =>
+  execSync(`npx ${PRISMIC_CLI} ${command}`, {
     encoding: "utf8",
     stdio: ["ignore", "pipe", "pipe"],
   });
 
 async function seed() {
   // Resolve the repository through the CLI (also confirms login and access).
-  const { domain } = JSON.parse(prismic("repo", "view", "--json"));
+  const { domain } = JSON.parse(prismic("repo view --json"));
 
   // Mint a temporary write token scoped to that repository.
-  const args = [
-    "--write",
-    "--repo",
-    domain,
-    "--name",
-    `${domain} seed`,
-    "--json",
-  ];
-  const { token } = JSON.parse(prismic("token", "create", ...args));
+  const { token } = JSON.parse(
+    prismic(
+      `token create --write --repo ${domain} --name "${domain} seed" --json`,
+    ),
+  );
 
   try {
     const migration = createMigration();
@@ -58,7 +57,7 @@ async function seed() {
     });
   } finally {
     try {
-      prismic("token", "delete", token);
+      prismic(`token delete ${token}`);
     } catch {
       // Best-effort cleanup; the token is identifiable by its name.
     }
