@@ -21,6 +21,13 @@
           "allowText": true,
           "repeat": true
         }
+      },
+      "footer_copyright": {
+        "type": "Text",
+        "config": {
+          "label": "Footer Copyright Text",
+          "placeholder": "© 2026 My Company"
+        }
       }
     }
   },
