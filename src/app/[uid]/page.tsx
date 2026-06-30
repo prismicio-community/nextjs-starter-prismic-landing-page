@@ -6,7 +6,7 @@ import { asText } from "@prismicio/client";
 import { cacheTagPrismicPages, getPreviewRef } from "@prismicio/next";
 import { SliceZone } from "@prismicio/react";
 
-import { client, fetchSettings } from "@/prismicio";
+import { client } from "@/prismicio";
 import { components } from "@/slices";
 
 // 1. Fetch a page from Prismic, cached for reuse.
@@ -18,6 +18,15 @@ async function fetchPage(uid: string, ref?: string) {
   cacheTagPrismicPages([page]);
   cacheLife("max");
   return page;
+}
+
+// Fetch the site settings, cached for reuse. Used for the page title.
+async function fetchSettings(ref?: string) {
+  "use cache";
+  const settings = await client.getSingle("settings", { ref });
+  cacheTagPrismicPages([settings]);
+  cacheLife("max");
+  return settings;
 }
 
 // 2. List the pages to build ahead of time.

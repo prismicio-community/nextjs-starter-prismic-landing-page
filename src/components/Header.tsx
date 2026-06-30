@@ -1,11 +1,9 @@
-import { fetchSettings } from "@/prismicio";
-import { getPreviewRef, PrismicNextLink } from "@prismicio/next";
+import { Content } from "@prismicio/client";
+import { PrismicNextLink } from "@prismicio/next";
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
 
-export async function Header() {
-  const settings = await fetchSettings(await getPreviewRef());
-
+export function Header({ settings }: { settings: Content.SettingsDocument }) {
   return (
     <header className="mx-auto max-w-6xl w-[calc(100vw-3rem)] py-6 md:py-8">
       <nav
