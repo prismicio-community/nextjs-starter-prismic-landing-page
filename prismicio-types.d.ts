@@ -202,6 +202,17 @@ interface SettingsDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/fields/link
 	 */
 	navigation_link: prismic.Repeatable<prismic.LinkField<string, string, unknown, prismic.FieldState, never>>;
+	
+	/**
+	 * Footer Copyright Text field in *Settings*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: © 2026 My Company
+	 * - **API ID Path**: settings.footer_copyright
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/fields/text
+	 */
+	footer_copyright: prismic.KeyTextField;
 }
 
 /**

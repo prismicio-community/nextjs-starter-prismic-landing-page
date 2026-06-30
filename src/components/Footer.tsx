@@ -14,9 +14,7 @@ export async function Footer() {
           <Logo className="size-8 text-zinc-400" />
           <span className="sr-only">{settings.data.site_title || "Home"}</span>
         </Link>
-        <p className="text-xs">
-          © {new Date().getFullYear()} {settings.data.site_title}
-        </p>
+        <p className="text-xs">{settings.data.footer_copyright}</p>
         <nav>
           <ul className="flex gap-6">
             {settings.data.navigation_link.map((item) => (
