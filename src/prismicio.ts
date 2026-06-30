@@ -5,6 +5,10 @@ import {
 import { enableAutoPreviews } from "@prismicio/next";
 import prismicConfig from "../prismic.config.json";
 
+type PrismicConfig = typeof prismicConfig & {
+  documentAPIEndpoint?: ClientConfig["documentAPIEndpoint"];
+};
+
 /**
  * The project's Prismic repository name.
  */
@@ -17,9 +21,7 @@ export const repositoryName = prismicConfig.repositoryName;
  * @param config - Configuration for the Prismic client.
  */
 export const createClient = (config: ClientConfig = {}) => {
-  const documentAPIEndpoint = (
-    prismicConfig as { documentAPIEndpoint?: string }
-  ).documentAPIEndpoint;
+  const { documentAPIEndpoint } = prismicConfig as PrismicConfig;
 
   const client = baseCreateClient(repositoryName, {
     routes: prismicConfig.routes,
