@@ -17,8 +17,13 @@ export const repositoryName = prismicConfig.repositoryName;
  * @param config - Configuration for the Prismic client.
  */
 export const createClient = (config: ClientConfig = {}) => {
+  const documentAPIEndpoint = (
+    prismicConfig as { documentAPIEndpoint?: string }
+  ).documentAPIEndpoint;
+
   const client = baseCreateClient(repositoryName, {
     routes: prismicConfig.routes,
+    ...(documentAPIEndpoint ? { documentAPIEndpoint } : {}),
     fetchOptions:
       process.env.NODE_ENV === "production"
         ? { next: { tags: ["prismic"] }, cache: "force-cache" }
