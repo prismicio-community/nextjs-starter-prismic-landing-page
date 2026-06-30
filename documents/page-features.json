@@ -1,0 +1,147 @@
+{
+  "id": "ZBHedhAAAKdKz5Kp",
+  "uid": "features",
+  "url": null,
+  "type": "page",
+  "href": "https://nextjs-starter-landing-page.cdn.prismic.io/api/v2/documents/search?ref=akQ7eREAACoANrox&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22ZBHedhAAAKdKz5Kp%22%29+%5D%5D",
+  "tags": [],
+  "first_publication_date": "2025-11-26T19:31:11+0000",
+  "last_publication_date": "2025-12-01T21:28:36+0000",
+  "slugs": [
+    "features"
+  ],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Features",
+        "spans": [],
+        "direction": "ltr"
+      }
+    ],
+    "slices": [
+      {
+        "variation": "simple",
+        "version": "initial",
+        "items": [],
+        "primary": {
+          "tagline": "Everything you need",
+          "headline": [
+            {
+              "type": "heading1",
+              "text": "Features",
+              "spans": [],
+              "direction": "ltr"
+            }
+          ],
+          "description": [
+            {
+              "type": "paragraph",
+              "text": "Our feature set is industry-leading, best in class.",
+              "spans": [],
+              "direction": "ltr"
+            }
+          ]
+        },
+        "id": "hero$5b7936a5-626b-4cff-bf00-f9ea16f1221a",
+        "slice_type": "hero",
+        "slice_label": null
+      },
+      {
+        "variation": "default",
+        "version": "initial",
+        "items": [],
+        "primary": {
+          "heading": [
+            {
+              "type": "heading2",
+              "text": "Dynamic Integrations",
+              "spans": [],
+              "direction": "ltr"
+            }
+          ],
+          "description": [
+            {
+              "type": "paragraph",
+              "text": "Check out our full suite of integrations with the apps you use most.",
+              "spans": [],
+              "direction": "ltr"
+            }
+          ],
+          "image": {
+            "dimensions": {
+              "width": 5092,
+              "height": 7638
+            },
+            "alt": "a black and white photo of a train station",
+            "copyright": null,
+            "url": "https://images.unsplash.com/photo-1676748305849-7e6958e4e635?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw1fHxibGFjayUyMGFuZCUyMHdoaXRlJTIwZ2VvbWV0cmljfGVufDB8fHx8MTc2NDE5NjYyMXww&ixlib=rb-4.1.0&q=85",
+            "id": "o0gCqBf4DpM",
+            "edit": {
+              "x": 0,
+              "y": 0,
+              "zoom": 1,
+              "background": "transparent"
+            }
+          },
+          "features": [
+            {
+              "text": [
+                {
+                  "type": "paragraph",
+                  "text": "Sync your data automatically with Slack, Notion, Google Drive, and dozens more.",
+                  "spans": [],
+                  "direction": "ltr"
+                }
+              ]
+            },
+            {
+              "text": [
+                {
+                  "type": "paragraph",
+                  "text": "Set up integrations in seconds with our no-code connector builder.",
+                  "spans": [],
+                  "direction": "ltr"
+                }
+              ]
+            },
+            {
+              "text": [
+                {
+                  "type": "paragraph",
+                  "text": "Keep everything in sync with real-time updates across all your connected apps.",
+                  "spans": [],
+                  "direction": "ltr"
+                }
+              ]
+            }
+          ]
+        },
+        "id": "features$d117c9e7-f6c9-441b-8cf1-5682fc179ac2",
+        "slice_type": "features",
+        "slice_label": null
+      }
+    ],
+    "meta_title": "Features",
+    "meta_description": "Explore Acme's features including cross-platform support, powerful integrations, and an intuitive interface your team will love.",
+    "meta_image": {
+      "dimensions": {
+        "width": 2400,
+        "height": 1260
+      },
+      "alt": "a row of books",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1665680779817-11a0d63ee51e?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyfHxibGFjayUyMGFuZCUyMHdoaXRlJTIwZ2VvbWV0cmljfGVufDB8fHx8MTc2NDE5NjYyMXww&ixlib=rb-4.1.0&q=85&rect=0,429,6024,3163&w=2400&h=1260",
+      "id": "SjKX4mga9XQ",
+      "edit": {
+        "x": 0,
+        "y": 429,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "aSdw-hIAACYApDI3",
+  "uid": null,
+  "url": null,
+  "type": "settings",
+  "href": "https://nextjs-starter-landing-page.cdn.prismic.io/api/v2/documents/search?ref=akQ7eREAACoANrox&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22aSdw-hIAACYApDI3%22%29+%5D%5D",
+  "tags": [],
+  "first_publication_date": "2025-11-26T21:28:36+0000",
+  "last_publication_date": "2026-06-30T21:56:09+0000",
+  "slugs": [
+    "settings"
+  ],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "site_title": "Acme",
+    "navigation_link": [
+      {
+        "id": "ZBHedhAAAKdKz5Kp",
+        "type": "page",
+        "tags": [],
+        "lang": "en-us",
+        "slug": "features",
+        "first_publication_date": "2025-11-26T19:31:11+0000",
+        "last_publication_date": "2025-12-01T21:28:36+0000",
+        "uid": "features",
+        "link_type": "Document",
+        "key": "5e05ab99-abba-4829-a125-51296444ddd3",
+        "isBroken": false,
+        "text": "Features"
+      }
+    ],
+    "footer_copyright": "© 2026 Acme"
+  }
+}
