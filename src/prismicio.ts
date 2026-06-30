@@ -5,9 +5,8 @@ import {
 import { enableAutoPreviews } from "@prismicio/next";
 import prismicConfig from "../prismic.config.json";
 
-type PrismicConfig = typeof prismicConfig & {
-  documentAPIEndpoint?: ClientConfig["documentAPIEndpoint"];
-};
+type PrismicConfig = typeof prismicConfig &
+  Pick<ClientConfig, "documentAPIEndpoint">;
 
 /**
  * The project's Prismic repository name.
@@ -21,11 +20,15 @@ export const repositoryName = prismicConfig.repositoryName;
  * @param config - Configuration for the Prismic client.
  */
 export const createClient = (config: ClientConfig = {}) => {
-  const { documentAPIEndpoint } = prismicConfig as PrismicConfig;
+  const typedPrismicConfig = prismicConfig as PrismicConfig;
+
+  const staticConfig: ClientConfig = { routes: typedPrismicConfig.routes };
+  if (typedPrismicConfig.documentAPIEndpoint) {
+    staticConfig.documentAPIEndpoint = typedPrismicConfig.documentAPIEndpoint;
+  }
 
   const client = baseCreateClient(repositoryName, {
-    routes: prismicConfig.routes,
-    ...(documentAPIEndpoint ? { documentAPIEndpoint } : {}),
+    ...staticConfig,
     fetchOptions:
       process.env.NODE_ENV === "production"
         ? { next: { tags: ["prismic"] }, cache: "force-cache" }
