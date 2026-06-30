@@ -1,27 +1,40 @@
-import { Metadata } from "next";
+import { type Metadata } from "next";
+import { cacheLife } from "next/cache";
 import { notFound } from "next/navigation";
 
 import { asText } from "@prismicio/client";
+import { cacheTagPrismicPages, getPreviewRef } from "@prismicio/next";
 import { SliceZone } from "@prismicio/react";
 
-import { createClient } from "@/prismicio";
+import { client, fetchSettings } from "@/prismicio";
 import { components } from "@/slices";
 
-export default async function Page({ params }: PageProps<"/[uid]">) {
-  const { uid } = await params;
-  const client = createClient();
-  const page = await client.getByUID("page", uid).catch(() => notFound());
-
-  return <SliceZone slices={page.data.slices} components={components} />;
+// 1. Fetch a page from Prismic, cached for reuse.
+async function fetchPage(uid: string, ref?: string) {
+  "use cache";
+  const page = await client
+    .getByUID("page", uid, { ref })
+    .catch(() => notFound());
+  cacheTagPrismicPages([page]);
+  cacheLife("max");
+  return page;
 }
 
+// 2. List the pages to build ahead of time.
+export async function generateStaticParams() {
+  const pages = await client.getAllByType("page");
+
+  return pages.map((page) => ({ uid: page.uid }));
+}
+
+// 3. Set the page's SEO metadata.
 export async function generateMetadata({
   params,
 }: PageProps<"/[uid]">): Promise<Metadata> {
   const { uid } = await params;
-  const client = createClient();
-  const page = await client.getByUID("page", uid);
-  const settings = await client.getSingle("settings");
+  const ref = await getPreviewRef();
+  const page = await fetchPage(uid, ref);
+  const settings = await fetchSettings(ref);
 
   return {
     title: `${asText(page.data.title)} | ${settings.data.site_title}`,
@@ -32,9 +45,10 @@ export async function generateMetadata({
   };
 }
 
-export async function generateStaticParams() {
-  const client = createClient();
-  const pages = await client.getAllByType("page");
+// 4. Render the page's slices.
+export default async function Page({ params }: PageProps<"/[uid]">) {
+  const { uid } = await params;
+  const page = await fetchPage(uid, await getPreviewRef());
 
-  return pages.map((page) => ({ uid: page.uid }));
+  return <SliceZone slices={page.data.slices} components={components} />;
 }

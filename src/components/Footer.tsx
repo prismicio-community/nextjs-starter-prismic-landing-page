@@ -1,11 +1,21 @@
-import { createClient } from "@/prismicio";
-import { PrismicNextLink } from "@prismicio/next";
+import { fetchSettings } from "@/prismicio";
+import { getPreviewRef, PrismicNextLink } from "@prismicio/next";
+import { cacheLife } from "next/cache";
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
 
+// The current year is request-time data. Reading it inside a cached function
+// (refreshed daily) keeps the footer part of the static shell instead of
+// forcing the whole page to render dynamically.
+async function getCurrentYear() {
+  "use cache";
+  cacheLife("days");
+  return new Date().getFullYear();
+}
+
 export async function Footer() {
-  const client = createClient();
-  const settings = await client.getSingle("settings");
+  const settings = await fetchSettings(await getPreviewRef());
+  const year = await getCurrentYear();
 
   return (
     <footer className="text-zinc-600 border-t border-zinc-200">
@@ -15,7 +25,7 @@ export async function Footer() {
           <span className="sr-only">{settings.data.site_title || "Home"}</span>
         </Link>
         <p className="text-xs">
-          © {new Date().getFullYear()} {settings.data.site_title}
+          © {year} {settings.data.site_title}
         </p>
         <nav>
           <ul className="flex gap-6">

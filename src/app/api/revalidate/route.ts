@@ -1,8 +1,13 @@
+import type { WebhookBody } from "@prismicio/client";
+import { revalidatePrismicPages } from "@prismicio/next";
 import { NextResponse } from "next/server";
-import { revalidateTag } from "next/cache";
 
-export async function POST() {
-  revalidateTag("prismic", "max");
+export async function POST(request: Request) {
+  const body: WebhookBody = await request.json();
 
-  return NextResponse.json({ revalidated: true, now: Date.now() });
+  if (body.type === "api-update") {
+    revalidatePrismicPages(body.documents);
+  }
+
+  return NextResponse.json({ revalidated: true });
 }

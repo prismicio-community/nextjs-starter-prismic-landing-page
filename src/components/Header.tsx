@@ -1,11 +1,10 @@
-import { createClient } from "@/prismicio";
-import { PrismicNextLink } from "@prismicio/next";
+import { fetchSettings } from "@/prismicio";
+import { getPreviewRef, PrismicNextLink } from "@prismicio/next";
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
 
 export async function Header() {
-  const client = createClient();
-  const settings = await client.getSingle("settings");
+  const settings = await fetchSettings(await getPreviewRef());
 
   return (
     <header className="mx-auto max-w-6xl w-[calc(100vw-3rem)] py-6 md:py-8">

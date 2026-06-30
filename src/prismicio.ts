@@ -1,8 +1,7 @@
-import {
-  createClient as baseCreateClient,
-  type ClientConfig,
-} from "@prismicio/client";
-import { enableAutoPreviews } from "@prismicio/next";
+import { createClient } from "@prismicio/client";
+import { cacheTagPrismicPages } from "@prismicio/next";
+import { cacheLife } from "next/cache";
+
 import prismicConfig from "../prismic.config.json";
 
 /**
@@ -11,22 +10,26 @@ import prismicConfig from "../prismic.config.json";
 export const repositoryName = prismicConfig.repositoryName;
 
 /**
- * Creates a Prismic client for the project's repository. The client is used to
+ * A shared Prismic client for the project's repository. The client is used to
  * query content from the Prismic API.
- *
- * @param config - Configuration for the Prismic client.
  */
-export const createClient = (config: ClientConfig = {}) => {
-  const client = baseCreateClient(repositoryName, {
-    routes: prismicConfig.routes,
-    fetchOptions:
-      process.env.NODE_ENV === "production"
-        ? { next: { tags: ["prismic"] }, cache: "force-cache" }
-        : { next: { revalidate: 5 } },
-    ...config,
-  });
+export const client = createClient(repositoryName, {
+  routes: prismicConfig.routes,
+});
 
-  enableAutoPreviews({ client });
-
-  return client;
-};
+/**
+ * Fetches the site's `settings` document, cached for reuse across the site.
+ *
+ * The `settings` document holds global content like the site title and
+ * navigation, so it is shared by layout components like the header and footer.
+ *
+ * @param ref - The Prismic ref to query. Pass the preview ref from
+ *   `getPreviewRef()` to load draft content during a preview.
+ */
+export async function fetchSettings(ref?: string) {
+  "use cache";
+  const settings = await client.getSingle("settings", { ref });
+  cacheTagPrismicPages([settings]);
+  cacheLife("max");
+  return settings;
+}
