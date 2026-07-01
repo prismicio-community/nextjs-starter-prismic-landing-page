@@ -53,7 +53,12 @@ async function seed() {
       );
     }
     await createWriteClient(domain, { writeToken: token }).migrate(migration, {
-      reporter: (event) => console.info(event.type),
+      reporter: ({ type, data }) => {
+        if (type === "assets:created")
+          console.info(`Uploaded ${data.created} assets.`);
+        if (type === "documents:created")
+          console.info(`Imported ${data.created} documents.`);
+      },
     });
   } finally {
     try {
