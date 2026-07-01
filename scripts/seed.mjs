@@ -57,7 +57,7 @@ async function seed() {
         if (type === "assets:created")
           console.info(`Uploaded ${data.created} assets.`);
         if (type === "documents:created")
-          console.info(`Imported ${data.created} documents.`);
+          console.info(`Created ${data.created} documents.`);
       },
     });
   } finally {
@@ -68,9 +68,8 @@ async function seed() {
     }
   }
 
-  console.info(
-    `\nSeeded "${domain}". Publish the documents from your dashboard to go live.`,
-  );
+  console.info(`\nSeeded "${domain}". Publish the documents to go live:`);
+  console.info(`https://${domain}.prismic.io/builder/migration`);
 }
 
 seed().catch((error) => {
