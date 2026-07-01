@@ -1,0 +1,345 @@
+{
+  "id": "aSePLBIAACUApF2x",
+  "uid": null,
+  "url": null,
+  "type": "homepage",
+  "href": "https://nextjs-starter-landing-page.cdn.prismic.io/api/v2/documents/search?ref=akQ7eREAACoANrox&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22aSePLBIAACUApF2x%22%29+%5D%5D",
+  "tags": [],
+  "first_publication_date": "2025-11-26T23:37:58+0000",
+  "last_publication_date": "2025-12-01T21:31:42+0000",
+  "slugs": [
+    "homepage"
+  ],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "slices": [
+      {
+        "variation": "default",
+        "version": "initial",
+        "items": [],
+        "primary": {
+          "tagline": "A brave frontier",
+          "headline": [
+            {
+              "type": "heading1",
+              "text": "Fancy new headlines for your product",
+              "spans": [],
+              "direction": "ltr"
+            }
+          ],
+          "description": [
+            {
+              "type": "paragraph",
+              "text": "Get started in minutes and see why teams everywhere are making the switch. No complicated setup, no learning curve.",
+              "spans": [],
+              "direction": "ltr"
+            }
+          ],
+          "buttons": [
+            {
+              "link_type": "Web",
+              "key": "2a429e18-8b00-4835-a46a-18459fa46a74",
+              "text": "Sign Up",
+              "variant": "Filled"
+            },
+            {
+              "link_type": "Web",
+              "key": "65e30a48-9008-47cc-9501-e319779911d7",
+              "text": "Request a demo",
+              "variant": "Outline"
+            }
+          ],
+          "image": {
+            "dimensions": {
+              "width": 4780,
+              "height": 3187
+            },
+            "alt": "a black and white photo of a building",
+            "copyright": null,
+            "url": "https://images.unsplash.com/photo-1637909336971-9367a156f4c5?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw4fHxibGFjayUyMGFuZCUyMHdoaXRlJTIwZ2VvbWV0cmljfGVufDB8fHx8MTc2NDE5NjYyMXww&ixlib=rb-4.1.0&q=85",
+            "id": "hYQEaUBzPdY",
+            "edit": {
+              "x": 0,
+              "y": 0,
+              "zoom": 1,
+              "background": "transparent"
+            }
+          }
+        },
+        "id": "hero$12bfd97c-a049-4ec0-8347-643a87325ed2",
+        "slice_type": "hero",
+        "slice_label": null
+      },
+      {
+        "variation": "default",
+        "version": "initial",
+        "items": [],
+        "primary": {
+          "logos": [
+            {
+              "image": {
+                "dimensions": {
+                  "width": 538,
+                  "height": 139
+                },
+                "alt": "Prismic",
+                "copyright": null,
+                "url": "https://images.prismic.io/nextjs-starter-landing-page/aSdcKmGnmrmGqX0Y_Prismic.png?auto=format,compress",
+                "id": "aSdcKmGnmrmGqX0Y",
+                "edit": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 1,
+                  "background": "transparent"
+                }
+              }
+            },
+            {
+              "image": {
+                "dimensions": {
+                  "width": 421,
+                  "height": 139
+                },
+                "alt": "Google",
+                "copyright": null,
+                "url": "https://images.prismic.io/nextjs-starter-landing-page/aSdcKWGnmrmGqX0W_Google.png?auto=format,compress",
+                "id": "aSdcKWGnmrmGqX0W",
+                "edit": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 1,
+                  "background": "transparent"
+                }
+              }
+            },
+            {
+              "image": {
+                "dimensions": {
+                  "width": 538,
+                  "height": 139
+                },
+                "alt": "Prismic",
+                "copyright": null,
+                "url": "https://images.prismic.io/nextjs-starter-landing-page/aSdcKmGnmrmGqX0Y_Prismic.png?auto=format,compress",
+                "id": "aSdcKmGnmrmGqX0Y",
+                "edit": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 1,
+                  "background": "transparent"
+                }
+              }
+            },
+            {
+              "image": {
+                "dimensions": {
+                  "width": 421,
+                  "height": 139
+                },
+                "alt": "Google",
+                "copyright": null,
+                "url": "https://images.prismic.io/nextjs-starter-landing-page/aSdcKWGnmrmGqX0W_Google.png?auto=format,compress",
+                "id": "aSdcKWGnmrmGqX0W",
+                "edit": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 1,
+                  "background": "transparent"
+                }
+              }
+            },
+            {
+              "image": {
+                "dimensions": {
+                  "width": 538,
+                  "height": 139
+                },
+                "alt": "Prismic",
+                "copyright": null,
+                "url": "https://images.prismic.io/nextjs-starter-landing-page/aSdcKmGnmrmGqX0Y_Prismic.png?auto=format,compress",
+                "id": "aSdcKmGnmrmGqX0Y",
+                "edit": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 1,
+                  "background": "transparent"
+                }
+              }
+            }
+          ]
+        },
+        "id": "logo_cloud$38a2732b-ed27-4f23-b676-de9323109b4e",
+        "slice_type": "logo_cloud",
+        "slice_label": null
+      },
+      {
+        "variation": "default",
+        "version": "initial",
+        "items": [],
+        "primary": {
+          "heading": [
+            {
+              "type": "heading2",
+              "text": "The features everyone's been asking for",
+              "spans": [],
+              "direction": "ltr"
+            }
+          ],
+          "description": [
+            {
+              "type": "paragraph",
+              "text": "We listened to your feedback and built exactly what you asked for. Here's what's new.",
+              "spans": [],
+              "direction": "ltr"
+            }
+          ],
+          "image": {
+            "dimensions": {
+              "width": 2097,
+              "height": 3145
+            },
+            "alt": "a close up of a black surface",
+            "copyright": null,
+            "url": "https://images.unsplash.com/photo-1664399033498-906ce9589f7d?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwzfHxibGFjayUyMGFuZCUyMHdoaXRlJTIwZ2VvbWV0cmljfGVufDB8fHx8MTc2NDE5NjYyMXww&ixlib=rb-4.1.0&q=85",
+            "id": "DFOy7ZdyvJ0",
+            "edit": {
+              "x": 0,
+              "y": 0,
+              "zoom": 1,
+              "background": "transparent"
+            }
+          },
+          "features": [
+            {
+              "text": [
+                {
+                  "type": "paragraph",
+                  "text": "Works seamlessly across desktop, mobile, and tablet so you can stay productive anywhere.",
+                  "spans": [],
+                  "direction": "ltr"
+                }
+              ]
+            },
+            {
+              "text": [
+                {
+                  "type": "paragraph",
+                  "text": "Connects with the tools you already use, so there's no need to change your workflow.",
+                  "spans": [],
+                  "direction": "ltr"
+                }
+              ]
+            },
+            {
+              "text": [
+                {
+                  "type": "paragraph",
+                  "text": "Simple, intuitive interface that your whole team can learn in minutes.",
+                  "spans": [],
+                  "direction": "ltr"
+                }
+              ]
+            }
+          ]
+        },
+        "id": "features$efcd6d43-d85d-4b27-bd65-7b17aa5c6200",
+        "slice_type": "features",
+        "slice_label": null
+      },
+      {
+        "variation": "default",
+        "version": "initial",
+        "items": [],
+        "primary": {
+          "heading": [
+            {
+              "type": "heading2",
+              "text": "Fancy new headlines for your product",
+              "spans": [],
+              "direction": "ltr"
+            }
+          ],
+          "buttons": [
+            {
+              "link_type": "Web",
+              "key": "875f3a83-cb36-492c-bed6-98ee734b6192",
+              "text": "Sign up",
+              "variant": "Filled"
+            },
+            {
+              "link_type": "Web",
+              "key": "9d04f639-2573-456e-a732-94c6ae7ac232",
+              "text": "Request a demo",
+              "variant": "Outline"
+            }
+          ]
+        },
+        "id": "call_to_action$4c577f8d-a4a6-4b9c-8435-47deb18f9813",
+        "slice_type": "call_to_action",
+        "slice_label": null
+      },
+      {
+        "variation": "default",
+        "version": "initial",
+        "items": [],
+        "primary": {
+          "heading": [
+            {
+              "type": "heading2",
+              "text": "Frequently asked questions",
+              "spans": [],
+              "direction": "ltr"
+            }
+          ],
+          "items": [
+            {
+              "question": "Can I use your product anywhere?",
+              "answer": [
+                {
+                  "type": "paragraph",
+                  "text": "There's no limit to the places you can use the product.",
+                  "spans": [],
+                  "direction": "ltr"
+                }
+              ]
+            },
+            {
+              "question": "What are some of the limits your product has?",
+              "answer": [
+                {
+                  "type": "paragraph",
+                  "text": "Luckily our product has no limits and is very versatile.",
+                  "spans": [],
+                  "direction": "ltr"
+                }
+              ]
+            }
+          ]
+        },
+        "id": "faq$70f9c59a-d643-4e3a-8508-b862a18bed3a",
+        "slice_type": "faq",
+        "slice_label": null
+      }
+    ],
+    "meta_title": "Acme",
+    "meta_description": "Acme helps teams collaborate seamlessly, automate workflows, and ship products faster. Get started in minutes.",
+    "meta_image": {
+      "dimensions": {
+        "width": 2400,
+        "height": 1260
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.prismic.io/nextjs-starter-landing-page/aS4JLnNYClf9nqD__ruth-d-hYQEaUBzPdY-unsplash.jpg?auto=format,compress&rect=0,339,4780,2510&w=2400&h=1260",
+      "id": "aS4JLnNYClf9nqD_",
+      "edit": {
+        "x": 0,
+        "y": 339,
+        "zoom": 1,
+        "background": "transparent"
+      }
+    }
+  }
+}

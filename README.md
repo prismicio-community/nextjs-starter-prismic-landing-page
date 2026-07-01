@@ -44,6 +44,17 @@ npm run dev
 
 To edit the content of this project, go to [prismic.io/dashboard](https://prismic.io/dashboard), click on the repository for this website, and start editing.
 
+### Seed example content
+
+This starter ships with example documents in the `documents/` folder (the homepage, an example page, and your site settings). To populate a new, empty repository with them, log in to the Prismic CLI and run the seed script:
+
+```sh
+npx prismic login
+npm run seed
+```
+
+The script imports the documents using Prismic's [Migration API](https://prismic.io/docs/migration-api-technical-reference) — uploading their images and relinking the documents to each other — using a temporary write token from your CLI session. When it finishes, **publish** the imported documents from your Prismic dashboard to make them live.
+
 ### Create a page
 
 To create a page, click on the green pencil icon, then select **Page**.
