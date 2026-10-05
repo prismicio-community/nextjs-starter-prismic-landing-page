@@ -1,7 +1,13 @@
 {
-  "repositoryName": "nextjs-starter-landing-page",
-  "libraries": ["./src/slices"],
+  "repositoryName": "f69cbd6f",
+  "libraries": [
+    "./src/slices"
+  ],
   "routes": [
+    {
+      "type": "blog_post",
+      "path": "/blog-post/:uid"
+    },
     {
       "type": "homepage",
       "path": "/"
@@ -10,5 +16,6 @@
       "type": "page",
       "path": "/:uid"
     }
-  ]
+  ],
+  "documentAPIEndpoint": "https://f69cbd6f.cdn.dev-tools-wroom.com/api/v2/"
 }
