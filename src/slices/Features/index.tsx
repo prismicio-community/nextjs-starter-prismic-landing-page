@@ -36,45 +36,47 @@ const Features: FC<FeaturesProps> = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="mx-auto max-w-2xl lg:max-w-6xl w-[calc(100vw-3rem)] py-10 md:py-20 grid grid-cols-1 gap-x-8 lg:gap-x-12 gap-y-16 sm:gap-y-20 lg:grid-cols-2 items-center"
+      className="bg-green-100"
     >
-      <div className="lg:max-w-lg">
-        {isFilled.richText(slice.primary.heading) && (
-          <h2 className="text-3xl font-bold tracking-tighter text-zinc-900 sm:text-4xl md:text-5xl">
-            <PrismicText field={slice.primary.heading} />
-          </h2>
-        )}
+      <div className="mx-auto max-w-2xl lg:max-w-6xl w-[calc(100vw-3rem)] py-10 md:py-20 grid grid-cols-1 gap-x-8 lg:gap-x-12 gap-y-16 sm:gap-y-20 lg:grid-cols-2 items-center">
+        <div className="lg:max-w-lg">
+          {isFilled.richText(slice.primary.heading) && (
+            <h2 className="text-3xl font-bold tracking-tighter text-zinc-900 sm:text-4xl md:text-5xl">
+              <PrismicText field={slice.primary.heading} />
+            </h2>
+          )}
 
-        {isFilled.richText(slice.primary.description) && (
-          <div className="mt-6 text-lg leading-relaxed text-zinc-500">
-            <PrismicRichText field={slice.primary.description} />
-          </div>
-        )}
+          {isFilled.richText(slice.primary.description) && (
+            <div className="mt-6 text-lg leading-relaxed text-zinc-500">
+              <PrismicRichText field={slice.primary.description} />
+            </div>
+          )}
 
-        {isFilled.group(slice.primary.features) && (
-          <ul className="mt-10 max-w-xl space-y-8 text-base leading-7 text-zinc-600 lg:max-w-none">
-            {slice.primary.features.map((item, index) => (
-              <li
-                key={`${index}-${asText(item.text)}`}
-                className="flex gap-3 items-start"
-              >
-                <CheckIcon
-                  className="mt-1 size-5 shrink-0 text-black"
-                  aria-hidden="true"
-                />
-                <div>
-                  <PrismicRichText field={item.text} />
-                </div>
-              </li>
-            ))}
-          </ul>
-        )}
+          {isFilled.group(slice.primary.features) && (
+            <ul className="mt-10 max-w-xl space-y-8 text-base leading-7 text-zinc-600 lg:max-w-none">
+              {slice.primary.features.map((item, index) => (
+                <li
+                  key={`${index}-${asText(item.text)}`}
+                  className="flex gap-3 items-start"
+                >
+                  <CheckIcon
+                    className="mt-1 size-5 shrink-0 text-black"
+                    aria-hidden="true"
+                  />
+                  <div>
+                    <PrismicRichText field={item.text} />
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+        <PrismicNextImage
+          field={slice.primary.image}
+          sizes="(min-width: 1024px) 576px, 100vw"
+          className="rounded-2xl bg-zinc-900 border border-zinc-200 shadow-sm"
+        />
       </div>
-      <PrismicNextImage
-        field={slice.primary.image}
-        sizes="(min-width: 1024px) 576px, 100vw"
-        className="rounded-2xl bg-zinc-900 border border-zinc-200 shadow-sm"
-      />
     </section>
   );
 };
