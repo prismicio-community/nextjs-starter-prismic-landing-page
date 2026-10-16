@@ -17,40 +17,42 @@ const Hero: FC<HeroProps> = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="mx-auto max-w-6xl w-[calc(100vw-3rem)] py-10 md:py-20 grid gap-12 md:grid-cols-2 items-center"
+      className="bg-blue-600 text-white"
     >
-      <div>
-        {isFilled.keyText(slice.primary.tagline) && (
-          <p className="text-sm font-semibold uppercase tracking-widest text-zinc-500">
-            {slice.primary.tagline}
-          </p>
-        )}
-        {isFilled.richText(slice.primary.headline) && (
-          <div className="text-5xl font-bold tracking-tight leading-tighter md:text-7xl text-zinc-900 text-balance mt-2">
-            <PrismicRichText field={slice.primary.headline} />
-          </div>
-        )}
-        {isFilled.richText(slice.primary.description) && (
-          <div className="max-w-md mt-6 text-lg text-zinc-500 leading-relaxed">
-            <PrismicRichText field={slice.primary.description} />
-          </div>
-        )}
-        {slice.variation === "default" &&
-          isFilled.repeatable(slice.primary.buttons) && (
-            <div className="flex flex-wrap gap-4 mt-8">
-              {slice.primary.buttons.map((button) => (
-                <Button key={button.text} field={button} />
-              ))}
+      <div className="mx-auto max-w-6xl w-[calc(100vw-3rem)] py-10 md:py-20 grid gap-12 md:grid-cols-2 items-center">
+        <div>
+          {isFilled.keyText(slice.primary.tagline) && (
+            <p className="text-sm font-semibold uppercase tracking-widest text-white/80">
+              {slice.primary.tagline}
+            </p>
+          )}
+          {isFilled.richText(slice.primary.headline) && (
+            <div className="text-5xl font-bold tracking-tight leading-tighter md:text-7xl text-white text-balance mt-2">
+              <PrismicRichText field={slice.primary.headline} />
             </div>
           )}
+          {isFilled.richText(slice.primary.description) && (
+            <div className="max-w-md mt-6 text-lg text-white/90 leading-relaxed">
+              <PrismicRichText field={slice.primary.description} />
+            </div>
+          )}
+          {slice.variation === "default" &&
+            isFilled.repeatable(slice.primary.buttons) && (
+              <div className="flex flex-wrap gap-4 mt-8">
+                {slice.primary.buttons.map((button) => (
+                  <Button key={button.text} field={button} />
+                ))}
+              </div>
+            )}
+        </div>
+        {slice.variation === "default" && (
+          <PrismicNextImage
+            field={slice.primary.image}
+            sizes="(min-width: 768px) 576px, 100vw"
+            className="relative aspect-square overflow-hidden rounded-2xl bg-zinc-900 border border-white/20 shadow-sm object-cover"
+          />
+        )}
       </div>
-      {slice.variation === "default" && (
-        <PrismicNextImage
-          field={slice.primary.image}
-          sizes="(min-width: 768px) 576px, 100vw"
-          className="relative aspect-square overflow-hidden rounded-2xl bg-zinc-900 border border-zinc-200 shadow-sm object-cover"
-        />
-      )}
     </section>
   );
 };
