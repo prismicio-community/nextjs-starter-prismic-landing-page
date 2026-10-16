@@ -17,7 +17,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="bg-blue-600 text-white"
+      className="bg-[#3e63dd] text-white"
     >
       <div className="mx-auto max-w-6xl w-[calc(100vw-3rem)] py-10 md:py-20 grid gap-12 md:grid-cols-2 items-center">
         <div>
