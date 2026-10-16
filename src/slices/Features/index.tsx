@@ -36,7 +36,7 @@ const Features: FC<FeaturesProps> = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="bg-green-100"
+      className="bg-[rgb(246,202,68)]"
     >
       <div className="mx-auto max-w-2xl lg:max-w-6xl w-[calc(100vw-3rem)] py-10 md:py-20 grid grid-cols-1 gap-x-8 lg:gap-x-12 gap-y-16 sm:gap-y-20 lg:grid-cols-2 items-center">
         <div className="lg:max-w-lg">
